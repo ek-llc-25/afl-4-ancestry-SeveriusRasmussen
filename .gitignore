@@ -1,0 +1,5 @@
+CMakeCache.txt
+CMakeFiles/
+Makefile
+afl_4_ancestry
+*.cmake
