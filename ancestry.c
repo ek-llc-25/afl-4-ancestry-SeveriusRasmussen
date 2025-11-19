@@ -115,11 +115,11 @@ void print_tree_recursive(struct ancestry_node_t *node, char *prefix, bool is_la
     }
 
     printf("%s", prefix);
-    printf("%s", is_last ? "└── " : "├── ");
+    printf("%s", is_last ? "|- " : "|- ");
     printf("%s %s\n", node->person->first_name, node->person->last_name);
 
     char new_prefix[1000];
-    snprintf(new_prefix, sizeof(new_prefix), "%s%s", prefix, is_last ? "    " : "│   ");
+    snprintf(new_prefix, sizeof(new_prefix), "%s%s", prefix, is_last ? "    " : "   ");
 
     if (node->mom != NULL && node->dad != NULL) {
         print_tree_recursive(node->mom, new_prefix, false);
